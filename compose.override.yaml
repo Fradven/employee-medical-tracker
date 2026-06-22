@@ -1,0 +1,4 @@
+# compose.override.yaml  ← not committed to git
+services:
+  web:
+    command: odoo --dev=all

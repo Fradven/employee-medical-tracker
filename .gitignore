@@ -1,0 +1,137 @@
+# =============================================================
+#  .gitignore — Python / Odoo project
+# =============================================================
+
+
+# -------------------------------------------------------------
+#  Secrets & credentials
+# -------------------------------------------------------------
+odoo_pg_pass
+*.pass
+*.secret
+.env
+.env.*
+!.env.example
+
+
+# -------------------------------------------------------------
+#  Python
+# -------------------------------------------------------------
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+dist/
+eggs/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+sdist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+htmlcov/
+.pytest_cache/
+.hypothesis/
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# pyenv
+.python-version
+
+
+# -------------------------------------------------------------
+#  Odoo
+# -------------------------------------------------------------
+
+# Odoo filestore & sessions (generated at runtime)
+/filestore/
+/sessions/
+
+# Odoo logs
+*.log
+/logs/
+
+# Odoo config (contains DB credentials)
+odoo.conf
+/config/odoo.conf
+
+# Compiled assets / web
+/web/static/
+*.pyc
+
+# Odoo scaffold defaults you don't want to track
+__manifest__.pyc
+
+
+# -------------------------------------------------------------
+#  Docker
+# -------------------------------------------------------------
+odoo_pg_pass
+compose.override.local.yaml
+
+
+# -------------------------------------------------------------
+#  Editors & OS
+# -------------------------------------------------------------
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+*.iml
+*.iws
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+
+# -------------------------------------------------------------
+#  Misc
+# -------------------------------------------------------------
+*.bak
+*.swp
+*.tmp
+*.orig
