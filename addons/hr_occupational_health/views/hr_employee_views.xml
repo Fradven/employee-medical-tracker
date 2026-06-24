@@ -1,0 +1,44 @@
+<odoo>
+    <record id="view_employee_form_medical_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.form.medical.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Occupational Health">
+                    <group>
+                        <field name="last_medical_check_date"/>
+                        <field name="medical_check_frequency_months"/>
+                        <field name="next_medical_check_date"/>
+                        <field name="medical_check_status"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_employee_tree_medical_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.tree.medical.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="next_medical_check_date" optional="show"/>
+                <field name="medical_check_status" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_employee_view_search_medical_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.search.medical.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <filter string="Needs Medical Check"
+                        name="needs_medical_check"
+                        domain="[('medical_check_status','in',['due_soon','overdue'])]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

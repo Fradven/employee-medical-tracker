@@ -1,6 +1,7 @@
 {
     'name': 'Occupational Health Tracking',
     'version': '17.0.1.0.0',
+    'license': 'LGPL-3',
     'category': 'Human Resources',
     'summary': 'Track mandatory employee medical checks',
     'depends': ['hr'],
